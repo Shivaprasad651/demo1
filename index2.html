@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debit Card Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Nordea Business Statistics</h1>
+    <div class="header-right">
+      <span id="time-display"></span>
+      <div class="user-profile">
+        <img src="profile.jpg" alt="User Profile" />
+        <button class="logoff-btn" onclick="logOff()">Log Off</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul>
+        <li onclick="showForm('Debit Card 1')">Debit Card 1</li>
+        <li onclick="showForm('Debit Card 2')">Debit Card 2</li>
+        <li onclick="showForm('Debit Card 3')">Debit Card 3</li>
+        <li onclick="showForm('Debit Card 4')">Debit Card 4</li>
+        <li onclick="showForm('Debit Card 5')">Debit Card 5</li>
+        <li onclick="showForm('Debit Card 6')">Debit Card 6</li>
+        <li onclick="showForm('Debit Card 7')">Debit Card 7</li>
+        <li onclick="showForm('Debit Card 8')">Debit Card 8</li>
+        <li onclick="showForm('Debit Card 9')">Debit Card 9</li>
+        <li onclick="showForm('Debit Card 10')">Debit Card 10</li>
+      </ul>
+    </nav>
+
+    <!-- Form Area -->
+    <div class="form-container" id="form-container">
+      <button class="close-btn" onclick="closeForm()">✖</button>
+      <h2 id="form-title">Select a Debit Card</h2>
+      <form id="card-form">
+        <label>From Date:</label>
+        <input type="date" />
+        <label>To Date:</label>
+        <input type="text" />
+        <label>Account No:</label>
+        <input type="text" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Update the time display every second
+    function updateTime() {
+      const timeDisplay = document.getElementById("time-display");
+      const now = new Date();
+      timeDisplay.innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+
+    // Log off simulation
+    function logOff(shiva) {
+        const formContainer = document.getElementById("form-container");
+      const formTitle = document.getElementById("form-title");
+      formTitle.innerText = cardName;
+      formContainer.style.display = "block";
+      formContainer.style.animation = "fadeIn 0.3s ease-in-out";
+      
+      // Place your log off functionality here
+    }
+
+    // Show the form with the selected Debit Card title
+    function showForm(cardName) {
+      const formContainer = document.getElementById("form-container");
+      const formTitle = document.getElementById("form-title");
+      formTitle.innerText = cardName;
+      formContainer.style.display = "block";
+      formContainer.style.animation = "fadeIn 0.3s ease-in-out";
+    }
+
+    // Close the form
+    function closeForm() {
+      document.getElementById("form-container").style.display = "none";
+    }
+  </script>
+</body>
+</html>

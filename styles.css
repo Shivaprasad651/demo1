@@ -1,0 +1,189 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack header and container vertically */
+  background-color: #f0f2f5;
+  font-family: calibri;
+  font-style: italic;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #0000ff;
+  color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#time-display {
+  font-weight: bold;
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user-profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.logoff-btn {
+  background: #ff4d4d;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.logoff-btn:hover {
+  background: #cc0000;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background: #0000ff;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar li {
+  cursor: pointer;
+  padding: 12px;
+  margin: 8px 0;
+  background: white;
+  color: #007bff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar li:hover {
+  background: #0056b3;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Form Container Styling */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  display: none;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Close Button Styling - Small & Top Right */
+.close-btn {
+  background: #ff4d4d;
+  color: white;
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 14px;
+}
+.close-btn:hover {
+  background: #0000ff;
+  color: white;
+}
+
+/* Form Styling */
+h2 {
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+  width: 80%;
+  text-align: left;
+}
+input {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+button[type="submit"] {
+  background-color: #0000ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 80%;
+  margin-top: 10px;
+}
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
